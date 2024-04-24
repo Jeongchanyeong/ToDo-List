@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   background-color: #67ba89;
   width: 100%;
-  height: 80px;
+  height: 8vh;
 `;
 const PageNameWrapper = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ const ButtonWrapper = styled.div`
 
 interface HeaderProps {
   children: string;
-  buttonVariety: any;
+  buttonVariety?: any;
   // JSX표현식의 결과물은 any?
 }
 
