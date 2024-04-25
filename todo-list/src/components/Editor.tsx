@@ -62,13 +62,40 @@ const ButtonWrapper = styled.div`
   gap: 25px;
 `;
 
-const Viewer = () => {
+const TitleTextArea = styled.textarea`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  padding: 10px;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 100%;
+  resize: vertical;
+  resize: none;
+`;
+
+const ContentTextArea = styled.textarea`
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 100%;
+  resize: vertical;
+  resize: none;
+  padding: 10px;
+`;
+
+const Editor = () => {
   return (
     <Wrapper>
       <Date>2024. 04. 24</Date>
 
-      <Title>aaa</Title>
-      <Content>aaa</Content>
+      <Title>
+        <TitleTextArea placeholder="오늘 할 작업의 대제목을 적어주세요"></TitleTextArea>
+      </Title>
+      <Content>
+        <ContentTextArea placeholder="오늘 할 작업을 세세하게 적어주세요."></ContentTextArea>
+      </Content>
       <ButtonWrapper>
         <Button buttonType={'default'} onClick={() => {}}>
           {'Edit'}
@@ -81,4 +108,4 @@ const Viewer = () => {
   );
 };
 
-export default Viewer;
+export default Editor;
