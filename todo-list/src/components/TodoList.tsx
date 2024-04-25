@@ -9,14 +9,24 @@ const Wrapper = styled.div`
 
   height: 100%;
   border-right: 2px solid #f3f3f3;
+
+  overflow-y: auto;
+  max-height: 100%;
+
+  scrollbar-width: thin;
+  scrollbar-color: #dfdfdf transparent;
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+  }
 `;
 
 const TodoList = () => {
   return (
     <Wrapper>
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
       <TodoListItem />
       <TodoListItem />
       <TodoListItem />
