@@ -19,8 +19,8 @@ const Create = () => {
     <Wrapper>
       <Header
         buttonVariety={
-          <Button buttonType={'create'} onClick={() => {}}>
-            {'Create'}
+          <Button buttonType={'default'} onClick={() => {}}>
+            {'Back'}
           </Button>
         }
       >
