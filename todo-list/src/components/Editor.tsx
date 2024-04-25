@@ -97,11 +97,8 @@ const Editor = () => {
         <ContentTextArea placeholder="오늘 할 작업을 세세하게 적어주세요."></ContentTextArea>
       </Content>
       <ButtonWrapper>
-        <Button buttonType={'default'} onClick={() => {}}>
-          {'Edit'}
-        </Button>
-        <Button buttonType={'delete'} onClick={() => {}}>
-          {'Delete'}
+        <Button buttonType={'done'} onClick={() => {}}>
+          {'Done'}
         </Button>
       </ButtonWrapper>
     </Wrapper>
