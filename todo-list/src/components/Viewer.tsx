@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Button from '../common/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
@@ -62,7 +63,8 @@ const ButtonWrapper = styled.div`
   gap: 25px;
 `;
 
-const Viewer = () => {
+const Viewer = ({ id }: any) => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <Date>2024. 04. 24</Date>
@@ -70,7 +72,12 @@ const Viewer = () => {
       <Title>aaa</Title>
       <Content>aaa</Content>
       <ButtonWrapper>
-        <Button buttonType={'default'} onClick={() => {}}>
+        <Button
+          buttonType={'default'}
+          onClick={() => {
+            navigate(`/edit`);
+          }}
+        >
           {'Edit'}
         </Button>
         <Button buttonType={'delete'} onClick={() => {}}>

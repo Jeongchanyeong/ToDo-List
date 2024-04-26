@@ -51,7 +51,7 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/edit" element={<Edit />} />
         <Route path="/create" element={<Create />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
