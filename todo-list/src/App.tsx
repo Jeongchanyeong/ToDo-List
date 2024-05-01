@@ -60,7 +60,25 @@ function reducer(state: any, action: any) {
   }
 }
 
-const TodosContext = createContext(dummyList);
+// 해결하지 못해서 지피티 사용. type 지정을 왜 이렇게 해야하는지 이해하지 못했음.
+interface TodosDispatchContextType {
+  onCreate: (title: string, content: string, createdAt: number) => void;
+  onEdit: (
+    title: string,
+    content: string,
+    id: number,
+    createdAt: number
+  ) => void;
+  onDelete: (id: number) => void;
+}
+
+export const TodosDispatchContext = createContext<TodosDispatchContextType>({
+  onCreate: (id) => {},
+  onEdit: (id) => {},
+  onDelete: (id) => {},
+});
+
+export const TodosContext = createContext(dummyList);
 
 function App() {
   const [data, dispatch] = useReducer(reducer, dummyList);
@@ -102,8 +120,6 @@ function App() {
       id,
     });
   };
-
-  const TodosDispatchContext = createContext({ onCreate, onEdit, onDelete });
 
   return (
     <>
