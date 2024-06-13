@@ -50,11 +50,11 @@ const TodoListItem = () => {
   return (
     <Wrapper>
       <TitleWrapper>
-        <Title>aaa.</Title>
+        <Title></Title>
       </TitleWrapper>
       <DetailWrapper>
-        <Date>2024. 04. 24</Date>
-        <Content>aaa</Content>
+        <Date></Date>
+        <Content></Content>
       </DetailWrapper>
     </Wrapper>
   );

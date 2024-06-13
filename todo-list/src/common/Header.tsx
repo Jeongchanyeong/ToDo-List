@@ -23,7 +23,6 @@ const ButtonWrapper = styled.div`
 interface HeaderProps {
   children: string;
   buttonVariety?: any;
-  // JSX표현식의 결과물은 any?
 }
 
 const Header = ({ children, buttonVariety }: HeaderProps) => {

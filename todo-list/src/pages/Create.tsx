@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   background-color: #ffffff;
-  width: 60vw;
+  width: 80vw;
   height: 100vh;
 `;
 
@@ -34,6 +34,7 @@ const Create = () => {
         {'Create Todo'}
       </Header>
       <TodoListWrapper>
+        <TodoList />
         <TodoList />
         <Editor />
       </TodoListWrapper>

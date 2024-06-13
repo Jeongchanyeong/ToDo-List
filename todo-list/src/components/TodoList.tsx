@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import TodoListItem from './TodoListItem';
 
 const Wrapper = styled.div`
   display: flex;
@@ -25,13 +24,7 @@ const Wrapper = styled.div`
 `;
 
 const TodoList = () => {
-  return (
-    <Wrapper>
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
-    </Wrapper>
-  );
+  return <Wrapper></Wrapper>;
 };
 
 export default TodoList;

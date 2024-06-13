@@ -63,14 +63,14 @@ const ButtonWrapper = styled.div`
   gap: 25px;
 `;
 
-const Viewer = ({ id }: any) => {
+const Viewer = () => {
   const navigate = useNavigate();
   return (
     <Wrapper>
       <Date>2024. 04. 24</Date>
 
-      <Title>aaa</Title>
-      <Content>aaa</Content>
+      <Title>{}</Title>
+      <Content>{}</Content>
       <ButtonWrapper>
         <Button
           buttonType={'default'}
