@@ -16,6 +16,8 @@ const Wrapper = styled.div`
 
   padding: 20px 10px;
   line-height: 1.2;
+
+  cursor: pointer;
 `;
 const TitleWrapper = styled.div`
   display: flex;
@@ -42,15 +44,17 @@ const Content = styled.div`
   flex: 5;
 `;
 
+// 클릭시 Wrapper background color 바껴야됨
+
 const TodoListItem = () => {
   return (
     <Wrapper>
       <TitleWrapper>
-        <Title>aaa.</Title>
+        <Title></Title>
       </TitleWrapper>
       <DetailWrapper>
-        <Date>2024. 04. 24</Date>
-        <Content>aaa</Content>
+        <Date></Date>
+        <Content></Content>
       </DetailWrapper>
     </Wrapper>
   );

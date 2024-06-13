@@ -18,9 +18,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const StyledButton = styled.button<ButtonProps>`
   width: ${(props) => props.width || '100px'};
   height: ${(props) => props.height || '50px'};
+  background-color: ${(props) => backgroundColor[props.buttonType]};
+
   border: none;
   border-radius: 7px;
-  background-color: ${(props) => backgroundColor[props.buttonType]};
   font-size: 18px;
   text-align: center;
   transition: all 0.3s;

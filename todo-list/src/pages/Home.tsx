@@ -3,10 +3,11 @@ import Header from '../common/Header';
 import Button from '../common/Button';
 import TodoList from '../components/TodoList';
 import Viewer from '../components/Viewer';
+import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   background-color: #ffffff;
-  width: 60vw;
+  width: 80vw;
   height: 100vh;
 `;
 
@@ -15,11 +16,17 @@ const TodoListWrapper = styled.div`
   height: 92vh;
 `;
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <Header
         buttonVariety={
-          <Button buttonType={'create'} onClick={() => {}}>
+          <Button
+            buttonType={'create'}
+            onClick={() => {
+              navigate('/create');
+            }}
+          >
             {'create'}
           </Button>
         }
@@ -27,6 +34,7 @@ const Home = () => {
         {'ToDo-List'}
       </Header>
       <TodoListWrapper>
+        <TodoList />
         <TodoList />
         <Viewer />
       </TodoListWrapper>

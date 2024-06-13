@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Button from '../common/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
@@ -63,14 +64,20 @@ const ButtonWrapper = styled.div`
 `;
 
 const Viewer = () => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <Date>2024. 04. 24</Date>
 
-      <Title>aaa</Title>
-      <Content>aaa</Content>
+      <Title>{}</Title>
+      <Content>{}</Content>
       <ButtonWrapper>
-        <Button buttonType={'default'} onClick={() => {}}>
+        <Button
+          buttonType={'default'}
+          onClick={() => {
+            navigate(`/edit`);
+          }}
+        >
           {'Edit'}
         </Button>
         <Button buttonType={'delete'} onClick={() => {}}>
