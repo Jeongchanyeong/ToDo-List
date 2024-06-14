@@ -71,19 +71,6 @@ const Viewer = () => {
 
       <Title>{}</Title>
       <Content>{}</Content>
-      <ButtonWrapper>
-        <Button
-          buttonType={'default'}
-          onClick={() => {
-            navigate(`/edit`);
-          }}
-        >
-          {'Edit'}
-        </Button>
-        <Button buttonType={'delete'} onClick={() => {}}>
-          {'Delete'}
-        </Button>
-      </ButtonWrapper>
     </Wrapper>
   );
 };

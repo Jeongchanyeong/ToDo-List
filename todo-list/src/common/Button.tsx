@@ -1,4 +1,3 @@
-import { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
 const backgroundColor = {
@@ -8,18 +7,7 @@ const backgroundColor = {
   delete: '#FD9898',
 };
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string;
-  buttonType: 'default' | 'create' | 'done' | 'delete';
-  width?: string;
-  height?: string;
-}
-
-const StyledButton = styled.button<ButtonProps>`
-  width: ${(props) => props.width || '100px'};
-  height: ${(props) => props.height || '50px'};
-  background-color: ${(props) => backgroundColor[props.buttonType]};
-
+const StyledButton = styled.button`
   border: none;
   border-radius: 7px;
   font-size: 18px;
@@ -33,23 +21,8 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-const Button = ({
-  buttonType,
-  onClick,
-  children,
-  width,
-  height,
-}: ButtonProps) => {
-  return (
-    <StyledButton
-      onClick={onClick}
-      buttonType={buttonType}
-      width={width}
-      height={height}
-    >
-      {children}
-    </StyledButton>
-  );
+const Button = () => {
+  return <></>;
 };
 
 export default Button;

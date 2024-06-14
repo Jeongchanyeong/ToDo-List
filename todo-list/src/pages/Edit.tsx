@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import TodoList from '../components/TodoList';
 import Editor from '../components/Editor';
-import Header from '../common/Header';
-import Button from '../common/Button';
+
 import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
@@ -19,20 +18,6 @@ const Edit = () => {
   const navigate = useNavigate();
   return (
     <Wrapper>
-      <Header
-        buttonVariety={
-          <Button
-            buttonType={'default'}
-            onClick={() => {
-              navigate(-1);
-            }}
-          >
-            {'< Back'}
-          </Button>
-        }
-      >
-        {'Edit Todo'}
-      </Header>
       <TodoListWrapper>
         <TodoList />
         <TodoList />
