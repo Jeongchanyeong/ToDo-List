@@ -6,7 +6,7 @@ import reset from 'styled-reset';
 import { theme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
 
 ${reset}
 
