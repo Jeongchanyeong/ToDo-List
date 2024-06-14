@@ -3,17 +3,14 @@ import Button from '../common/Button';
 
 const Wrapper = styled.div`
   display: flex;
-
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  margin-top: 120px;
+  flex: 1;
+  padding: 0px 70px;
 
-  margin: 20px 100px 20px;
-  width: 65%;
-
-  color: #1d1d1d;
-
-  div {
-    margin-top: 15px;
-  }
+  gap: 15px;
 `;
 
 const Date = styled.div`
@@ -22,20 +19,20 @@ const Date = styled.div`
   justify-content: center;
 
   background-color: #fff4cf;
-  border-radius: 15px;
-  margin: 0 auto; /* 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+  border-radius: 20%;
 
-  width: 20%;
+  width: auto;
+  padding: 5px 20px;
   height: 4%;
 `;
 
 const Title = styled.div`
   display: flex;
   align-items: center;
-
-  padding: 0px 15px;
-  width: auto;
-  height: 8%;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 10%;
 
   border-radius: 5px;
   background-color: #f7f7f7;
@@ -43,23 +40,13 @@ const Title = styled.div`
 
 const Content = styled.div`
   display: flex;
-  width: auto;
-  height: 80%;
-
-  padding: 15px;
+  width: 100%;
+  height: 60%;
+  box-sizing: border-box;
+  padding: 20px;
 
   border-radius: 5px;
   background-color: #f7f7f7;
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  height: 10%;
-
-  gap: 25px;
 `;
 
 const TitleTextArea = styled.textarea`
@@ -84,18 +71,35 @@ const ContentTextArea = styled.textarea`
   resize: none;
   padding: 10px;
 `;
+const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 10%;
 
+  gap: 25px;
+`;
 const Editor = () => {
   return (
     <Wrapper>
       <Date>2024. 04. 24</Date>
-
       <Title>
         <TitleTextArea placeholder="오늘 할 작업의 대제목을 적어주세요"></TitleTextArea>
       </Title>
       <Content>
         <ContentTextArea placeholder="오늘 할 작업을 세세하게 적어주세요."></ContentTextArea>
       </Content>
+      <ButtonWrapper>
+        <Button
+          onClick={() => {}}
+          bgColor="yellow"
+          width="medium"
+          height="medium"
+        >
+          Done
+        </Button>
+      </ButtonWrapper>
     </Wrapper>
   );
 };

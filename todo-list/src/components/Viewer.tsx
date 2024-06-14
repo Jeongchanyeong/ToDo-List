@@ -4,17 +4,14 @@ import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
-
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  margin-top: 120px;
+  flex: 1;
+  padding: 0px 70px;
 
-  margin: 20px 100px 20px;
-  width: 65%;
-
-  color: #1d1d1d;
-
-  div {
-    margin-top: 15px;
-  }
+  gap: 15px;
 `;
 
 const Date = styled.div`
@@ -23,20 +20,20 @@ const Date = styled.div`
   justify-content: center;
 
   background-color: #fff4cf;
-  border-radius: 15px;
-  margin: 0 auto; /* 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+  border-radius: 20%;
 
-  width: 20%;
+  width: auto;
+  padding: 5px 20px;
   height: 4%;
 `;
 
 const Title = styled.div`
   display: flex;
   align-items: center;
-
-  padding: 0px 15px;
-  width: auto;
-  height: 8%;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 10%;
 
   border-radius: 5px;
   background-color: #f7f7f7;
@@ -44,10 +41,10 @@ const Title = styled.div`
 
 const Content = styled.div`
   display: flex;
-  width: auto;
-  height: 80%;
-
-  padding: 15px;
+  width: 100%;
+  height: 60%;
+  box-sizing: border-box;
+  padding: 20px;
 
   border-radius: 5px;
   background-color: #f7f7f7;
@@ -69,8 +66,23 @@ const Viewer = () => {
     <Wrapper>
       <Date>2024. 04. 24</Date>
 
-      <Title>{}</Title>
-      <Content>{}</Content>
+      <Title>{'asdsad'}</Title>
+      <Content>{'asdasd'}</Content>
+      <ButtonWrapper>
+        <Button
+          onClick={() => {
+            navigate('/edit');
+          }}
+          bgColor="default"
+          width="medium"
+          height="medium"
+        >
+          Edit
+        </Button>
+        <Button onClick={() => {}} bgColor="red" width="medium" height="medium">
+          Delete
+        </Button>
+      </ButtonWrapper>
     </Wrapper>
   );
 };

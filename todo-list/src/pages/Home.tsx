@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Header from '../common/Header';
-
-import TodoList from '../components/TodoList';
 import Viewer from '../components/Viewer';
+
+import TodoWrapper from '../components/TodoWrapper';
 
 const Wrapper = styled.div`
   background-color: #ffffff;
@@ -12,16 +12,15 @@ const Wrapper = styled.div`
 
 const TodoListWrapper = styled.div`
   display: flex;
+  width: 100%;
   height: 100vh;
 `;
 const Home = () => {
   return (
     <Wrapper>
-      <Header />
-
+      <Header title="To Do List "></Header>
       <TodoListWrapper>
-        <TodoList />
-        <TodoList />
+        <TodoWrapper />
         <Viewer />
       </TodoListWrapper>
     </Wrapper>

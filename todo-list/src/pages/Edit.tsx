@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import TodoList from '../components/TodoList';
 import Editor from '../components/Editor';
-
-import { useNavigate } from 'react-router-dom';
+import Header from '../common/Header';
+import TodoWrapper from '../components/TodoWrapper';
 
 const Wrapper = styled.div`
   background-color: #ffffff;
@@ -12,15 +11,15 @@ const Wrapper = styled.div`
 
 const TodoListWrapper = styled.div`
   display: flex;
-  height: 92vh;
+  width: 100%;
+  height: 100vh;
 `;
 const Edit = () => {
-  const navigate = useNavigate();
   return (
     <Wrapper>
+      <Header title="Edit Page" />
       <TodoListWrapper>
-        <TodoList />
-        <TodoList />
+        <TodoWrapper />
         <Editor />
       </TodoListWrapper>
     </Wrapper>

@@ -1,3 +1,4 @@
+import { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 import { DefaultTheme } from 'styled-components/dist/types';
 
@@ -19,16 +20,22 @@ const CommonButton = styled.button<ButtonProps>`
   }
 `;
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   bgColor: keyof DefaultTheme['bgColor'];
   width: keyof DefaultTheme['width'];
   height: keyof DefaultTheme['height'];
+
   children: React.ReactNode;
 }
 
-const Button = ({ bgColor, width, height, children }: ButtonProps) => {
+const Button = ({ bgColor, width, height, children, onClick }: ButtonProps) => {
   return (
-    <CommonButton bgColor={bgColor} width={width} height={height}>
+    <CommonButton
+      onClick={onClick}
+      bgColor={bgColor}
+      width={width}
+      height={height}
+    >
       {children}
     </CommonButton>
   );

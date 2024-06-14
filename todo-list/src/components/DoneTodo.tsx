@@ -1,7 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
-import TodoListItem from './TodoListItem';
 import Button from '../common/Button';
-import { useNavigate } from 'react-router-dom';
+import TodoListItem from './TodoListItem';
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,8 +14,8 @@ const Wrapper = styled.div`
 const ItemWrapper = styled.div`
   display: flex;
   align-items: center;
-
   flex-direction: column;
+
   overflow-y: auto;
   max-height: 100%;
 
@@ -40,36 +40,41 @@ const ButtonWrapper = styled.div`
   margin-right: 50px;
 `;
 
-const TodoList = () => {
-  const navigate = useNavigate();
+const DoneTodo = () => {
   return (
     <Wrapper>
       <ItemWrapper>
         <TodoListItem />
         <TodoListItem />
         <TodoListItem />
-        <TodoListItem /> <TodoListItem />
         <TodoListItem />
-        <TodoListItem /> <TodoListItem />
         <TodoListItem />
-        <TodoListItem /> <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
+        <TodoListItem />
         <TodoListItem />
         <TodoListItem />
       </ItemWrapper>
       <ButtonWrapper>
         <Button
-          onClick={() => {
-            navigate('/create');
-          }}
-          bgColor="darkGreen"
+          onClick={() => {}}
+          bgColor="default"
           width="medium"
           height="medium"
         >
-          Create
+          Log Out
         </Button>
       </ButtonWrapper>
     </Wrapper>
   );
 };
-
-export default TodoList;
+export default DoneTodo;
