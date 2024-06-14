@@ -4,21 +4,20 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  text-align: start;
 
-  width: 78%;
+  margin-top: 14px;
+  width: 80%;
   height: 35px;
   border-radius: 8px 8px 0px 0px;
   border-bottom: 1px solid #f3f3f3;
 
-  background-color: #ffffff;
   color: #848484;
 
   padding: 20px 10px;
-  line-height: 1.2;
 
   cursor: pointer;
 `;
+
 const TitleWrapper = styled.div`
   display: flex;
 `;
@@ -33,14 +32,10 @@ const DetailWrapper = styled(TitleWrapper)`
   margin-top: 10px;
   font-size: 13px;
 `;
-const Date = styled.div`
+const Date = styled(Title)`
   flex: 5;
 `;
-const Content = styled.div`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
+const Content = styled(Date)`
   flex: 5;
 `;
 
@@ -50,11 +45,11 @@ const TodoListItem = () => {
   return (
     <Wrapper>
       <TitleWrapper>
-        <Title></Title>
+        <Title>오늘 저녁은 어땠을까</Title>
       </TitleWrapper>
       <DetailWrapper>
-        <Date></Date>
-        <Content></Content>
+        <Date>2024.05.23 19:30</Date>
+        <Content>오늘 저녁을 적게 먹었더니 배가 고프다 </Content>
       </DetailWrapper>
     </Wrapper>
   );
