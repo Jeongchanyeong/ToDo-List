@@ -19,7 +19,7 @@ const TodoListWrapper = styled.div`
 const Create = () => {
   return (
     <Wrapper>
-      <Header title="Create" />
+      <Header title="Create Page" />
       <TodoListWrapper>
         <TodoWrapper />
         <Editor />

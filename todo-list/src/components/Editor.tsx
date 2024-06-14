@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Button from '../common/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
@@ -34,7 +35,7 @@ const Title = styled.div`
   width: 100%;
   height: 10%;
 
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #f7f7f7;
 `;
 
@@ -45,7 +46,7 @@ const Content = styled.div`
   box-sizing: border-box;
   padding: 20px;
 
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #f7f7f7;
 `;
 
@@ -54,10 +55,12 @@ const TitleTextArea = styled.textarea`
   justify-content: center;
   align-items: center;
   height: 15px;
-  padding: 10px;
-
+  padding: 14px;
+  font-size: 18px;
+  font-family: 'Poor Story', system-ui;
+  border: 2px solid rgb(229, 229, 229);
   background-color: rgb(255, 255, 255);
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
   resize: vertical;
   resize: none;
@@ -65,8 +68,13 @@ const TitleTextArea = styled.textarea`
 
 const ContentTextArea = styled.textarea`
   background-color: rgb(255, 255, 255);
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
+  font-size: 18px;
+  border: 2px solid rgb(229, 229, 229);
+
+  font-family: 'Poor Story', system-ui;
+
   resize: vertical;
   resize: none;
   padding: 10px;
@@ -81,6 +89,7 @@ const ButtonWrapper = styled.div`
   gap: 25px;
 `;
 const Editor = () => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <Date>2024. 04. 24</Date>
@@ -91,6 +100,16 @@ const Editor = () => {
         <ContentTextArea placeholder="오늘 할 작업을 세세하게 적어주세요."></ContentTextArea>
       </Content>
       <ButtonWrapper>
+        <Button
+          onClick={() => {
+            navigate(-1);
+          }}
+          bgColor="default"
+          width="medium"
+          height="medium"
+        >
+          Cancel
+        </Button>
         <Button
           onClick={() => {}}
           bgColor="yellow"

@@ -31,10 +31,10 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 45px 36px 38px 36px;
   width: 100%;
   height: 10%;
-
+  font-size: 18px;
   border-radius: 5px;
   background-color: #f7f7f7;
 `;
@@ -44,8 +44,8 @@ const Content = styled.div`
   width: 100%;
   height: 60%;
   box-sizing: border-box;
-  padding: 20px;
-
+  padding: 34px 32px 32px;
+  font-size: 18px;
   border-radius: 5px;
   background-color: #f7f7f7;
 `;
@@ -66,8 +66,8 @@ const Viewer = () => {
     <Wrapper>
       <Date>2024. 04. 24</Date>
 
-      <Title>{'asdsad'}</Title>
-      <Content>{'asdasd'}</Content>
+      <Title>{'오늘 할 작업의 대제목을 적어주세요.'}</Title>
+      <Content>{'오늘 할 작업을 세세하게 적어주세요.'}</Content>
       <ButtonWrapper>
         <Button
           onClick={() => {
