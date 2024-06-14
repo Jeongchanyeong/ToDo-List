@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import Header from '../common/Header';
-import Button from '../common/Button';
+
 import TodoList from '../components/TodoList';
 import Viewer from '../components/Viewer';
-import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   background-color: #ffffff;
@@ -13,12 +12,13 @@ const Wrapper = styled.div`
 
 const TodoListWrapper = styled.div`
   display: flex;
-  height: 92vh;
+  height: 100vh;
 `;
 const Home = () => {
-  const navigate = useNavigate();
   return (
     <Wrapper>
+      <Header />
+
       <TodoListWrapper>
         <TodoList />
         <TodoList />

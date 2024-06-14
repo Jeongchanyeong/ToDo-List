@@ -1,35 +1,36 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #67ba89;
+
+  background-color: ${(props) => props.theme.bgColor.lightGreen};
+  position: fixed;
   width: 100%;
-  height: 8vh;
-`;
-const PageNameWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  color: white;
-  font-size: 50px;
-  margin-left: 120px;
-`;
-const ButtonWrapper = styled.div`
-  margin-right: 15px;
+  padding: 20px 60px;
+
+  top: 0;
 `;
 
-interface HeaderProps {
-  children: string;
-  buttonVariety?: any;
-}
-
-const Header = ({ children, buttonVariety }: HeaderProps) => {
+const Header = () => {
   return (
     <Wrapper>
-      <PageNameWrapper>{children}</PageNameWrapper>
-      <ButtonWrapper>{buttonVariety}</ButtonWrapper>
+      <Button bgColor="default" width="medium" height="medium">
+        Back
+      </Button>
+      <Button bgColor="yellow" width="medium" height="medium">
+        Done
+      </Button>
+      <Button bgColor="red" width="medium" height="medium">
+        Delete
+      </Button>
+      <Button bgColor="darkGreen" width="medium" height="medium">
+        Create
+      </Button>
+      <Button bgColor="lightYellow" width="large" height="large">
+        Login
+      </Button>
     </Wrapper>
   );
 };

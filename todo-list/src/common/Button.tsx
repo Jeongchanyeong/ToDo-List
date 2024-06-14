@@ -1,13 +1,11 @@
 import styled from 'styled-components';
+import { DefaultTheme } from 'styled-components/dist/types';
 
-const backgroundColor = {
-  default: '#D6D6D6',
-  create: '#57AC6A',
-  done: '#fdd63c',
-  delete: '#FD9898',
-};
+const CommonButton = styled.button<ButtonProps>`
+  background-color: ${(props) => props.theme.bgColor[props.bgColor]};
+  width: ${(props) => props.theme.width[props.width]};
+  height: ${(props) => props.theme.height[props.height]};
 
-const StyledButton = styled.button`
   border: none;
   border-radius: 7px;
   font-size: 18px;
@@ -21,8 +19,19 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = () => {
-  return <></>;
+interface ButtonProps {
+  bgColor: keyof DefaultTheme['bgColor'];
+  width: keyof DefaultTheme['width'];
+  height: keyof DefaultTheme['height'];
+  children: React.ReactNode;
+}
+
+const Button = ({ bgColor, width, height, children }: ButtonProps) => {
+  return (
+    <CommonButton bgColor={bgColor} width={width} height={height}>
+      {children}
+    </CommonButton>
+  );
 };
 
 export default Button;
