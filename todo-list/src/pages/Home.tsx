@@ -19,20 +19,6 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <Wrapper>
-      <Header
-        buttonVariety={
-          <Button
-            buttonType={'create'}
-            onClick={() => {
-              navigate('/create');
-            }}
-          >
-            {'create'}
-          </Button>
-        }
-      >
-        {'ToDo-List'}
-      </Header>
       <TodoListWrapper>
         <TodoList />
         <TodoList />
