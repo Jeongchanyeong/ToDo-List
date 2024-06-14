@@ -6,7 +6,7 @@ const CommonButton = styled.button<ButtonProps>`
   background-color: ${(props) => props.theme.bgColor[props.bgColor]};
   width: ${(props) => props.theme.width[props.width]};
   height: ${(props) => props.theme.height[props.height]};
-
+  font-family: 'Poor Story', system-ui;
   border: none;
   border-radius: 7px;
   font-size: 18px;
