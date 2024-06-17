@@ -1,6 +1,4 @@
 import Router from './Router';
-import Button from './common/Button';
-import Header from './common/Header';
 
 const dummyList = [
   {

@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   flex: 1;
   border-right: 2px solid #f3f3f3;
 
-  height: 83%;
+  height: 84%;
 `;
 
 const TodoWrapper = () => {

@@ -6,9 +6,15 @@ import { useNavigate } from 'react-router-dom';
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+
   flex-direction: column;
   flex: 1;
+`;
+
+const Title = styled.div`
+  font-size: 22px;
+  flex: 1;
+  color: rgb(74, 113, 107);
 `;
 
 const ItemWrapper = styled.div`
@@ -18,7 +24,7 @@ const ItemWrapper = styled.div`
   flex-direction: column;
   overflow-y: auto;
   max-height: 100%;
-
+  flex: 12;
   scrollbar-width: thin;
   scrollbar-color: #dfdfdf transparent;
   ::-webkit-scrollbar {
@@ -36,7 +42,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-
+  flex: 1;
   margin-right: 50px;
 `;
 
@@ -44,16 +50,14 @@ const TodoList = () => {
   const navigate = useNavigate();
   return (
     <Wrapper>
+      <Title>Do</Title>
+
       <ItemWrapper>
         <TodoListItem />
         <TodoListItem />
         <TodoListItem />
-        <TodoListItem /> <TodoListItem />
         <TodoListItem />
-        <TodoListItem /> <TodoListItem />
-        <TodoListItem />
-        <TodoListItem /> <TodoListItem />
-        <TodoListItem />
+
         <TodoListItem />
       </ItemWrapper>
       <ButtonWrapper>
