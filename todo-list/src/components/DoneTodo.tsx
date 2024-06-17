@@ -6,9 +6,16 @@ import TodoListItem from './TodoListItem';
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+
   flex-direction: column;
   flex: 1;
+  border-right: 2px solid #f3f3f3;
+`;
+
+const Title = styled.div`
+  font-size: 22px;
+  flex: 1;
+  color: rgb(74, 113, 107);
 `;
 
 const ItemWrapper = styled.div`
@@ -28,6 +35,7 @@ const ItemWrapper = styled.div`
     background-color: #888;
     border-radius: 3px;
   }
+  flex: 12;
 `;
 
 const ButtonWrapper = styled.div`
@@ -36,32 +44,15 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-
+  flex: 1;
   margin-right: 50px;
 `;
 
 const DoneTodo = () => {
   return (
     <Wrapper>
+      <Title>Done</Title>
       <ItemWrapper>
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
-        <TodoListItem />
         <TodoListItem />
       </ItemWrapper>
       <ButtonWrapper>
